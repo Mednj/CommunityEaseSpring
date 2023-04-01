@@ -1318,19 +1318,19 @@
 
       <div class="card-body">
 
-        <form>
+        <form action="/registerParent" method="post">
           <div class="row">
             <div class="col-lg-6">
               <div class="form-group">
-                <label for="firstName">First name</label>
-                <input type="text" class="form-control" id="firstName">
+                <label for="prenom">First name</label>
+                <input type="text" class="form-control" id="prenom" name="prenom">
               </div>
             </div>
 
             <div class="col-lg-6">
               <div class="form-group">
-                <label for="lastName">Last name</label>
-                <input type="text" class="form-control" id="lastName">
+                <label for="nom">Last name</label>
+                <input type="text" class="form-control" id="nom" name="nom">
               </div>
             </div>
           </div>
@@ -1343,8 +1343,8 @@
           </div>
 
           <div class="form-group mb-4">
-            <label for="adress1">Address line 1</label>
-            <input type="text" class="form-control" id="adress1">
+            <label for="address">Address line 1</label>
+            <input type="text" class="form-control" id="adress1" name="address">
           </div>
 
           <div class="form-group mb-4">
@@ -1353,8 +1353,8 @@
           </div>
 
           <div class="form-group mb-4">
-            <label for="phone">Phone no</label>
-            <input type="text" class="form-control" id="phone">
+            <label for="tel">Phone no</label>
+            <input type="text" class="form-control" id="tel" name="tel">
           </div>
 
           <div class="form-group mb-4">
@@ -1393,16 +1393,16 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="exampleFormControlPasswor3">First Name</label>
-                        <input type="text" class="form-control rounded-0" name="First Name" placeholder="Enter Student First Name" id="">
+                        <input type="text" class="form-control rounded-0" name="sprenom" placeholder="Enter Student First Name" id="">
                       </div>
                     <div class="form-group">
                         <label for="exampleFormControlPasswor3">Last Name</label>
-                        <input type="text" class="form-control rounded-0" name="Last Name" placeholder="Enter Student Last Name" id="">
+                        <input type="text" class="form-control rounded-0" name="snom" placeholder="Enter Student Last Name" id="">
                       </div>
                     
                     <div class="form-group">
                       <label for="exampleFormControlSelect14">Select Student Group</label>
-                      <select class="form-control rounded-0" id="exampleFormControlSelect14">
+                      <select class="form-control rounded-0" id="exampleFormControlSelect14" name="grp">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -1413,7 +1413,7 @@
 
                     <div class="form-group">
                         <label for="exampleFormControlSelect14">Select Student Level</label>
-                        <select class="form-control rounded-0" id="exampleFormControlSelect14">
+                        <select class="form-control rounded-0" id="exampleFormControlSelect14" name="niveau">
                           <option>1st primary</option>
                           <option>2nd primary</option>
                           <option>3rd primary</option>
@@ -1436,7 +1436,7 @@
                 <h2 class="mb-0">
                   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseBorderTwo"
                     aria-expanded="false" aria-controls="collapseBorderTwo">
-                    Collapsible Group Item #2
+                      Add Student to Parent Profile #2
                   </button>
                 </h2>
               </div>
@@ -1486,8 +1486,7 @@
               <div class="card-header" id="headingBorderThree">
                 <h2 class="mb-0">
                   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseBorderThree"
-                    aria-expanded="false" aria-controls="collapseBorderThree">
-                    Collapsible Group Item #3
+                    aria-expanded="false" aria-controls="collapseBorderThree">Add Student to Parent Profile #3
                   </button>
                 </h2>
               </div>
