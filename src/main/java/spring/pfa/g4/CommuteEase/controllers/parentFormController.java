@@ -11,7 +11,7 @@ import spring.pfa.g4.CommuteEase.service.ParentService;
 
 @Controller
 public class parentFromController {
-	private ParentController parentController;
+	private ParentService parentService;
 
 	@GetMapping("/addParentFrom")
 	public String addParentFrom(String nom , Model model) {
@@ -27,7 +27,7 @@ public class parentFromController {
 	public String ParentRegister(@ModelAttribute Parent parent){
 
 		System.out.println(parent.toString());
-		Parent parent1 = parentController.saveParent(parent);
+		parentService.saveParent(parent);
 
 		return "addParentFom";
 	}
