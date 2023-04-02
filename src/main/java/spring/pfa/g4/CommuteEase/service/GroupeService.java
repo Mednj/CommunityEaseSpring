@@ -9,4 +9,6 @@ public interface GroupeService {
     public void deleteGroupe(Integer id);
     public void updateGroupe(Integer id,Groupe groupe);
     public void countGroupe(Integer id);
+
+    public Groupe getGroupeBygroupNumber(int groupeNumber);
 }

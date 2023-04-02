@@ -45,4 +45,10 @@ public class GroupeServiceImpl implements GroupeService {
 		
 	}
 
+	@Override
+	public Groupe getGroupeBygroupNumber(int groupeNumber) {
+		return groupeRepository.findGroupeByGroupNumber(groupeNumber);
+	}
+
+
 }

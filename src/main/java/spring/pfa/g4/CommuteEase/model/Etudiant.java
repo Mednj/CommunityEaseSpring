@@ -13,9 +13,14 @@ public class Etudiant {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 private int id;
-private String nom;
 
-private String prenom;
+	public int getId() {
+		return id;
+	}
+
+	private String snom;
+
+private String sprenom;
 private String niveau;
 
 
@@ -36,17 +41,17 @@ public void setParent(Parent parent) {
 @ManyToOne
 private Parent parent;
 
-public String getNom() {
-	return nom;
+public String getSnom() {
+	return snom;
 }
-public void setNom(String nom) {
-	this.nom = nom;
+public void setSnom(String nom) {
+	this.snom = nom;
 }
-public String getPrenom() {
-	return prenom;
+public String getSprenom() {
+	return sprenom;
 }
-public void setPrenom(String prenom) {
-	this.prenom = prenom;
+public void setSprenom(String prenom) {
+	this.sprenom = prenom;
 }
 public String getNiveau() {
 	return niveau;

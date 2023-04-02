@@ -1330,41 +1330,19 @@
                                   </tr>
                                 </thead>
                                 <tbody>
-                                  <tr>
-                                    <td scope="row">1</td>
-                                    <td>Lucia</td>
-                                    <td>Christ</td>
-                                    <td>@Lucia</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">2</td>
-                                    <td>Catrin</td>
-                                    <td>Seidl</td>
-                                    <td>@catrin</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">3</td>
-                                    <td>Lilli</td>
-                                    <td>Kirsh</td>
-                                    <td>@lilli</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">4</td>
-                                    <td>Else</td>
-                                    <td>Voigt</td>
-                                    <td>@voigt</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">5</td>
-                                    <td>Ursel</td>
-                                    <td>Harms</td>
-                                    <td>@ursel</td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">6</td>
-                                    <td>Anke</td>
-                                    <td>Sauter</td>
-                                    <td>@Anke</td>
+
+
+                                  <tr th:each="etudiant: ${etudiants}">
+                                      <td scope="row" th:text="${etudiant.getId()}"></td>
+                                      <td th:text="${etudiant.sprenom}" />
+                                      <td th:text="${etudiant.snom}" />
+                                      <td th:text="${etudiant.getGrp()}" />
+                                      <td th:text="${etudiant.getNiveau()}" />
+                                      <td th:text="${etudiant.getParent().getId()}" />
+                                      <td th:text="${etudiant.getParent().getPrenom()}" />
+
+
+
                                   </tr>
                                 </tbody>
                               </table>     

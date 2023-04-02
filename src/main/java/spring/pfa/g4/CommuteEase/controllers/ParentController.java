@@ -52,13 +52,13 @@ public class ParentController {
 			parentService.updateParent(id, parent);
 		}
 
-	@GetMapping("/findbyid/{id}")
-	public Optional<Parent> getParentById(@PathVariable Integer id) {
-		return parentService.getParentById(id);
-	}
-		public void countParent(Integer id) {
-			parentService.countParent(id);
+		@GetMapping("/findbyid/{id}")
+		public Optional<Parent> getParentById(@PathVariable Integer id) {
+			return parentService.getParentById(id);
 		}
+			public void countParent(Integer id) {
+				parentService.countParent(id);
+			}
 	    
 	    
 	    
