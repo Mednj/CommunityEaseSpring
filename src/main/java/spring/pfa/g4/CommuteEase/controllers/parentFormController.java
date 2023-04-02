@@ -23,7 +23,7 @@ public class parentFormController {
 		//Parent p =  parentService.getParentByNom(nom);
 		//String parentEmail = p.getEmail();
 		//model.addAttribute("parentEmail",parentEmail );
-		return "index";
+		return "ParentForm2";
 
 	}
 
@@ -38,7 +38,7 @@ public class parentFormController {
 
 
 
-		return "index";
+		return "ParentForm2";
 	}
 
 	@GetMapping("/ShowStudents")
@@ -48,6 +48,4 @@ public class parentFormController {
 		System.out.println(etudiantController.getAllEtudiants());
 		return "ShowStudents";
 	}
-
-	// this comment if for testing git
 }
