@@ -11,7 +11,7 @@ public class Agence {
     private int id;
     private String nom;
     private String adresse;
-    private Number telephone;
+    private int telephone;
     private String driver;
 
 /*
@@ -50,11 +50,11 @@ public class Agence {
         this.adresse = adresse;
     }
 
-    public Number getTelephone() {
+    public int getTelephone() {
         return telephone;
     }
 
-    public void setTelephone(Number telephone) {
+    public void setTelephone(int telephone) {
         this.telephone = telephone;
     }
 
