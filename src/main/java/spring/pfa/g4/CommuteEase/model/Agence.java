@@ -12,7 +12,7 @@ public class Agence {
     private String nom;
     private String adresse;
     private int telephone;
-    private String driver;
+
 
 /*
     @OneToMany(mappedBy = "agencebus",fetch=FetchType.LAZY)
@@ -58,12 +58,5 @@ public class Agence {
         this.telephone = telephone;
     }
 
-    public String getDriver() {
-        return driver;
-    }
-
-    public void setDriver(String driver) {
-        this.driver = driver;
-    }
 
 }

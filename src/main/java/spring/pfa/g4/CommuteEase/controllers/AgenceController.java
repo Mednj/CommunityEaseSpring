@@ -16,8 +16,9 @@ public class AgenceController {
     private AgenceService agenceService;
 
 
-    @PostMapping("/addagence")
-    public String saveAgence(@ModelAttribute("agence") Agence agence) {
+    @PostMapping("/saveAgence")
+    public String saveAgence(@ModelAttribute Agence agence) {
+
         agenceService.saveAgence(agence);
         return "redirect:/listAgences";
 
@@ -28,6 +29,11 @@ public class AgenceController {
     public String getAllAgences(Model model) {
        model.addAttribute("listAgences",agenceService.getAllAgences());
        return "list_Agences";
+    }
+
+    @GetMapping("/addAgence")
+    public String saveAgenceForm(Model model){
+        return "addAgence";
     }
 
 
