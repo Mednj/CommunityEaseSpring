@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import spring.pfa.g4.CommuteEase.model.Agence;
 import spring.pfa.g4.CommuteEase.model.Bus;
-import spring.pfa.g4.CommuteEase.repository.AgenceRepository;
 import spring.pfa.g4.CommuteEase.repository.BusRepository;
 
 import java.util.List;

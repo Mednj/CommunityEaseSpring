@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 import spring.pfa.g4.CommuteEase.model.Agence;
 import spring.pfa.g4.CommuteEase.service.AgenceService;
 
@@ -37,15 +38,14 @@ public class AgenceController {
     }
 
 
-    @GetMapping("UpdateAgence/{id}")
-    public String UpdateAgence(@PathVariable(value="id") int id,Model model) {
-        //get agence from service
-            Agence agence=agenceService.getAgenceById(id);
+    @GetMapping("/UpdateAgence/{id}")
+    public ModelAndView UpdateAgence(@PathVariable(value="id") int id) {
+        ModelAndView editView=new ModelAndView("updateAgency");
+        Agence agency=agenceService.getAgenceById(id);
+        editView.addObject("agency",agency);
+        return editView;
 
-        // set agence as a model attribute
-        model.addAttribute("agence",agence);
 
-        return "Update_Agence";
     }
     @GetMapping("DeleteAgence/{id}")
     public String DeleteAgence(@PathVariable(value="id") int id,Model model) {
