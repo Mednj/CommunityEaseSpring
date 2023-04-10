@@ -29,17 +29,8 @@ public class AgenceServiceImpl implements AgenceService{
 
     @Override
     public Agence getAgenceById(int id){
-        Optional<Agence> optional=agenceRepository.findById(id);
-        Agence agence=null;
-        if(optional.isPresent()){
-            agence=optional.get();
 
-        }
-        else{
-            throw new RuntimeException("Agence not found for id :: "+id);
-
-        }
-        return agence;
+        return agenceRepository.findById(id).get();
     }
 
     @Override

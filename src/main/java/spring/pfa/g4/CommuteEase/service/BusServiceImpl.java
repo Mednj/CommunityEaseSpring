@@ -30,17 +30,7 @@ public class BusServiceImpl implements BusService{
 
         @Override
         public Bus getBusById(int id){
-            Optional<Bus> optional=busRepository.findById(id);
-            Bus bus=null;
-            if(optional.isPresent()){
-                bus=optional.get();
-
-            }
-            else{
-                throw new RuntimeException("Bus not found for id :: "+id);
-
-            }
-            return bus;
+            return busRepository.findById(id).get();
         }
 
         @Override

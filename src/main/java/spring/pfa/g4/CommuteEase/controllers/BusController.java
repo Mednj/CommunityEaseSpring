@@ -40,7 +40,7 @@ public class BusController {
 
 
     @GetMapping("UpdateBus/{id}")
-        public ModelAndView UpdateBus(@PathVariable(value="id") int id) {
+        public ModelAndView UpdateBus(@PathVariable(value="id") Integer id) {
             ModelAndView editView=new ModelAndView("updateBus");
             Bus bus=busService.getBusById(id);
             editView.addObject("bus",bus);

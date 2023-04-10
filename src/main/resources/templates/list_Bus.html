@@ -1324,6 +1324,7 @@
                   <th scope="col">Matricule</th>
                   <th scope="col">Marque</th>
                   <th scope="col">Chauffeur</th>
+                  <th scope="col">Capacité</th>
 
 
                   <th scope="col-4">Action</th>
@@ -1339,6 +1340,7 @@
                   <td><a href="" th:text="${bus.matricule}"></a></td>
                   <td th:text="${bus.marque}" />
                   <td th:text="${bus.chauffeur}" />
+                  <td th:text="${bus.capacite}" />
                   <td>
                     <div>
                       <a th:href="@{/UpdateBus/{id}(id=${bus.id})}" class="btn btn-primary">Update</a>

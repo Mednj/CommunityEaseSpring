@@ -19,7 +19,6 @@ public class AgenceController {
 
     @PostMapping("/saveAgence")
     public String saveAgence(@ModelAttribute Agence agence) {
-
         agenceService.saveAgence(agence);
         return "redirect:/listAgences";
 
@@ -38,10 +37,12 @@ public class AgenceController {
     }
 
 
-    @GetMapping("/UpdateAgence/{id}")
-    public ModelAndView UpdateAgence(@PathVariable(value="id") int id) {
+    @RequestMapping("/UpdateAgence/{id}")
+    public ModelAndView UpdateAgence(@PathVariable(value="id") Integer id) {
         ModelAndView editView=new ModelAndView("updateAgency");
         Agence agency=agenceService.getAgenceById(id);
+
+
         editView.addObject("agency",agency);
         return editView;
 

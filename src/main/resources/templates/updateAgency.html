@@ -7,6 +7,9 @@
  // GITHUB: https://github.com/themefisher/
 -->
 
+<html xmlns:th="http://www.thymeleaf.org">
+
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,8 +19,8 @@
 
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Roboto" rel="stylesheet">
-  <link href="plugins/material/css/materialdesignicons.min.css" rel="stylesheet" />
-  <link href="plugins/simplebar/simplebar.css" rel="stylesheet" />
+  <link href="../static/plugins/material/css/materialdesignicons.min.css" rel="stylesheet" />
+  <link href="../static/plugins/simplebar/simplebar.css" rel="stylesheet" />
 
   <!-- PLUGINS CSS STYLE -->
   <link href="plugins/nprogress/nprogress.css" rel="stylesheet" />
@@ -35,7 +38,7 @@
 
 
   <!-- FAVICON -->
-  <link href="images/favicon.png" rel="shortcut icon" th:href="@{images/favicon.png}" />
+  <link href="../static/images/favicon.png" rel="shortcut icon" th:href="@{images/favicon.png}" />
 
   <!--
     HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
@@ -1303,15 +1306,16 @@
     <!-- ====================================
     ——— CONTENT WRAPPER
     ===================================== -->
-    <div class="content-wrapper">
-      <div class="content"><!--  Card Profile -->
+    <div class="content-wrapper" style="display: flex;justify-content: center;">
+      <div class="content" style="display: flex;justify-content: center;"><!--  Card Profile -->
 
 
         <div class="row">
 
-          <div class="col-xl-8">
+          <div class="col-md-12">
             <!-- Billing Information -->
-            <div class="card card-default">
+
+            <div class="card card-default" >
               <div class="card-header">
                 <h2 class="mb-5">Fill In The Agency's Informations</h2>
               </div>
@@ -1322,6 +1326,10 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
+
+                        <label for="id">Id</label>
+                        <input type="number" class="form-control" id="id" name="id" th:field="*{id}" readonly="readonly">
+
                         <label for="nom">Nom</label>
                         <input type="text" class="form-control" id="nom" name="nom" th:field="*{nom}">
 
@@ -1333,7 +1341,7 @@
                         <input type="number" class="form-control" id="telephone" name="telephone" th:field="*{telephone}">
                         </br>
                         <center>
-                          <button type="submit" class="btn btn-primary">Ajouter</button>
+                          <button type="submit" class="btn btn-primary">Modifier</button>
                         </center>
                       </div>
                     </div>
