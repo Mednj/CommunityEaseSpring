@@ -6,41 +6,37 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import spring.pfa.g4.CommuteEase.model.Etudiant;
-import spring.pfa.g4.CommuteEase.repository.EtudiantRepository;
-import spring.pfa.g4.CommuteEase.repository.ParentRepository;
+import spring.pfa.g4.CommuteEase.repository.StudentRepository;
 
 @Service
-public class EtudiantServiceImpl implements EtudiantService  {
-	
-	  @Autowired
-	    private EtudiantRepository etudiantRepository;
+public class StudentServiceImpl implements StudentService {
+
+	@Autowired
+	private StudentRepository studentRepository;
+
+
 	@Override
-	public Etudiant saveEtudiant(Etudiant etudiant) {
-        return etudiantRepository.save(etudiant);
+	public void saveStudent(Etudiant student){
+		this.studentRepository.save(student);
 
 	}
 
 	@Override
-	public List<Etudiant> getAllEtudiants() {
-        return etudiantRepository.findAll();
+	public List<Etudiant> getAllStudents() {
+		return studentRepository.findAll();
+	}
+
+
+	@Override
+	public Etudiant getStudentById(int id){
+
+		return studentRepository.findById(id).get();
 	}
 
 	@Override
-	public void deleteEtudiant(Integer id) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void DeleteStudentById(int id){
+		this.studentRepository.deleteById(id);
 
-	@Override
-	public void updateEtudiant(Integer id, Etudiant etudiant) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void countEtudiant(Integer id) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
