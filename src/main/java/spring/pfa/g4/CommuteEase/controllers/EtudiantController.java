@@ -27,19 +27,19 @@ import spring.pfa.g4.CommuteEase.repository.EtudiantRepository;
 @RequestMapping("/etudiant")
 
 public class EtudiantController {
-	
 
-	 
-    @Autowired
-    private EtudiantService etudiantService;
-    @PostMapping("/add")
 
-    
+
+	@Autowired
+	private EtudiantService etudiantService;
+	@PostMapping("/add")
+
+
 	public Etudiant saveEtudiant(@RequestBody Etudiant etudiant) {
 		return etudiantService.saveEtudiant(etudiant);
 	}
-	
-    @GetMapping("/getAll")
+
+	@GetMapping("/getAll")
 
 	public List<Etudiant> getAllEtudiants() {
 		return etudiantService.getAllEtudiants();
@@ -57,7 +57,7 @@ public class EtudiantController {
 		etudiantService.countEtudiant(id);
 	}
 
-	
-	
-	
+
+
+
 }

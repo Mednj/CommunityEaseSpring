@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import spring.pfa.g4.CommuteEase.model.Etudiant;
 
-public interface StudentRepository extends JpaRepository<Etudiant,Integer>{
+public interface EtudiantRepository extends JpaRepository<Etudiant,Integer>{
 
 }
